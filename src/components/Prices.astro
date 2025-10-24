@@ -1,0 +1,28 @@
+---
+import { ContentCard } from '../components/ui/ContentCard';
+
+  const WHATSAPP = "584245209592";
+
+  const plans = [
+    { title: "Simple art", description: "Dibujo con pocos detalles, estilo minimalista.", price: "3" },
+    { title: "Furros", description: "Arte de personajes con rasgos animales y humanos.", price: "10" },
+    { title: "Renderizado", description: "Generar una imagen a partir de un modelo digital.", price: "6" },
+    { title: "Arte con fondos detallados", description: "Ilustración con escenarios complejos y detalles.", price: "10" },
+    { title: "Arte sin fondos detallados", description: "Imagen centrada en el personaje u onjeto, con fondo simple o vacío.", price: "5" },
+    { title: "Boseto", description: "Dibujo preliminar, rápido y sin detalles finales.", price: "2" },
+    { title: "Edición de fotografía", description: "Modificación digital de una foto para mejorar o alterar su apariencia.", price: "6" },
+  ];
+---
+
+<section id="servicios" class="flex justify-center py-12 px-8 w-full bg-blue">
+  <div class="flex justify-center flex-wrap gap-8 p-10">
+    {plans.map(plan => (
+      <ContentCard
+        title={plan.title}
+        description={plan.description}
+        price={plan.price}
+        phoneNumber={WHATSAPP}
+      />
+    ))}
+  </div>
+</section>

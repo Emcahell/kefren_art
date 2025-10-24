@@ -1,0 +1,5 @@
+- hero
+- about me
+- gallery arts (title: Mis artes)
+- prices
+- footer

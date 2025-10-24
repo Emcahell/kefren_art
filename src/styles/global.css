@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-purple: var(--color-purple);
+  --color-violet: var(--color-violet);
+  --color-blue: var(--color-blue);
+  --color-celestial: var(--color-celestial);
+
+  --font-family-primary: var(--font-family-primary);
+  --font-family-secondary: var(--font-family-secondary);
+}
+
+:root {
+  --color-purple: #7e5bef;
+  --color-violet: rgb(190, 169, 245);
+  --color-blue: #3b82f6;
+  --color-celestial: #22d3ee;
+
+  --font-family-primary: "Bungee", sans-serif;
+  --font-family-secondary:"Overpass", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.carousel {
+  > * {
+    flex: 0 0 100%;
+  }
+}
+
+.infinite-scrolling {
+  will-change: transform;
+  animation: scrolling 10s linear infinite;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-move-down-up {
+  animation: move-down-up 12s ease-in-out infinite;
+}
+
+.animate-move-up-down {
+  animation: move-up-down 12s ease-in-out infinite;
+}
+
+@keyframes move-down-up {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(40px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes move-up-down {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

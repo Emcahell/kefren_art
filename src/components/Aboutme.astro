@@ -1,0 +1,12 @@
+---
+import { TextAboutme } from '../components/ui/TextAboutme';
+import { AvatarAboutme } from '../components/ui/AvatarAboutme';
+import { Bubble } from '../components/ui/Bubble';
+---
+
+<section id="sobre-mi" class="relative grid md:grid-cols-2 justify-center md:p-8 md:mt-20 font-family-secondary overflow-x-hidden">
+  <Bubble client:load className="animate-move-down-up bg-blue top-2 -left-18" />
+  <Bubble client:load className="animate-move-up-down bg-violet bottom-4 -right-28" />
+  <AvatarAboutme client:load />
+  <TextAboutme client:load />
+</section>
